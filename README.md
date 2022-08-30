@@ -20,5 +20,5 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```bash
 python -m  PyQt5.uic.pyuic EasyEraser.ui -o EasyEraser.py
-pyinstaller --clean -F -w -i xataxi-icon.ico Register4TaxiLicenseMain.py
+pyinstaller --clean -F -w EasyEraserMain.py
 ```
