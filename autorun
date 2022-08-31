@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+TOOL_NAME=EasyEraser
+ARCH_MIPS64=mips64
+ARCH_X86_64=x86_64
+ARCH_AARCH64=aarch64
+
+ARCH=$(uname -m)
+echo "arch: $ARCH"
+
+ROOT_DIR=$(pwd)
+echo "dir: ${ROOT_DIR}"
+
+if [[ $ARCH =~ $ARCH_X86_64 ]]; then
+    "${ROOT_DIR}"/$ARCH_X86_64/$TOOL_NAME
+elif [[ $ARCH =~ $ARCH_AARCH64 ]]; then
+    "${ROOT_DIR}"/$ARCH_AARCH64/$TOOL_NAME
+elif [[ $ARCH =~ $ARCH_MIPS64 ]]; then
+    "${ROOT_DIR}"/$ARCH_MIPS64/$TOOL_NAME
+else
+    echo "error: unknown arch !"
+fi
