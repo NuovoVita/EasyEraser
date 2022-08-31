@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TOOL_NAME=EasyEraser
+TOOL_NAME=EasyEraserMain
 ARCH_MIPS64=mips64
 ARCH_X86_64=x86_64
 ARCH_AARCH64=aarch64
