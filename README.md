@@ -22,3 +22,14 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 python -m  PyQt5.uic.pyuic EasyEraser.ui -o EasyEraser.py
 pyinstaller --clean -F -w -i static/EasyEraser.ico EasyEraserMain.py
 ```
+
+## Docker 编译
+
+```bash
+docker image build -t easy-eraser .
+docker run -d -p 8000:8000 --name http-server easy-eraser
+```
+
+## 参考
+
+- [ARM架构安装PyQT5](https://blog.csdn.net/foreverey/article/details/121410672)
