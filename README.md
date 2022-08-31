@@ -6,7 +6,7 @@ Linux 系统文件删除工具，为了方便非Linux用户删除特定文件使
 
 > Linux 或 MacOS
 >
-> Python 3.9
+> Python 3.8
 
 ## 开发环境搭建
 
@@ -20,5 +20,5 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```bash
 python -m  PyQt5.uic.pyuic EasyEraser.ui -o EasyEraser.py
-pyinstaller --clean -F -w EasyEraserMain.py
+pyinstaller --clean -F -w -i static/EasyEraser.ico EasyEraserMain.py
 ```
