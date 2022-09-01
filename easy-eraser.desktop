@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=EasyEraser (v1.0)
+Comment=File easy eraser tool (v1.0)
+Exec=/opt/EasyEraser/autorun
+Icon=/opt/EasyEraser/static/EasyEraser.png
+Terminal=false
+Type=Application
+Categories=Application;
+StartupNotify=true

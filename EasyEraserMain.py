@@ -86,8 +86,12 @@ class EasyEraserMainDialog(QDialog):
         msg = '确定要擦除“{}”吗？'.format(_file_path)
         result = QMessageBox.question(self, '擦除确认框', msg, QMessageBox.Yes | QMessageBox.No)
         if result == QMessageBox.Yes:
-            Path(_file_path).unlink(missing_ok=True)
-            self.ui.file_table.removeRow(row_num)
+            try:
+                if Path(_file_path).is_file():
+                    Path(_file_path).unlink()
+                self.ui.file_table.removeRow(row_num)
+            except Exception as e:
+                print(e)
         return
 
 
